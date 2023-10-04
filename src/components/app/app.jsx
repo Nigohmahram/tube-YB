@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Box } from '@mui/material';
-import { Main, Chanel, VideoDetail, Search, Navbar } from '../';
+import { Main, Chanel, Navbar, VideoDetail, Search } from '../';
 const App = () => {
 	return (
 		<Box>
