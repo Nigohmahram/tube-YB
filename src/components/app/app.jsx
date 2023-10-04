@@ -1,12 +1,15 @@
 import { Routes, Route } from 'react-router-dom';
 import { Box } from '@mui/material';
-import { Main, Chanel } from '../';
+import { Main, Chanel, VideoDetail, Search, Navbar } from '../';
 const App = () => {
 	return (
 		<Box>
+			<Navbar />
 			<Routes>
 				<Route path='/' element={<Main />} />
-				<Route path='/chanel' element={<Chanel />} />
+				<Route path='/chanel/:id' element={<Chanel />} />
+				<Route path='/vidio/:id' element={<VideoDetail />} />
+				<Route path='/search/:id' element={<Search />} />
 			</Routes>
 		</Box>
 	);
