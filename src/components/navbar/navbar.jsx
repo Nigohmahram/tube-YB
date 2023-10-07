@@ -2,6 +2,7 @@ import { Stack, Box } from '@mui/material';
 import { logo } from '../../constants';
 import { colors } from '../../constants/colors';
 import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 import { SearchBar } from '../';
 import { Home } from '@mui/icons-material';
 import { NightsStay, NotificationsNone } from '@mui/icons-material';
@@ -20,11 +21,13 @@ const Navbar = () => {
 			</Link>
 			<SearchBar />
 			<Box />
-			<Link to={'/'}>
+			<Box>
 				<NightsStay sx={{ width: '35px', height: '35px', mr: '5px', color: 'aqua' }} />
 				<NotificationsNone sx={{ width: '35px', height: '35px', mr: '5px', color: '#80a5f5' }} />
-				<Home sx={{ width: '35px', height: '35px', color: 'white' }} />
-			</Link>
+				<Link to={'/'}>
+					<Home sx={{ width: '35px', height: '35px', color: 'white' }} />
+				</Link>
+			</Box>
 		</Stack>
 	);
 };

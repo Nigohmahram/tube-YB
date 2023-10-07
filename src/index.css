@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body {
 	color: white;
 	margin: 0;
@@ -12,4 +17,34 @@ body {
 	font-weight: 500;
 	font-size: 17px;
 	border-radius: none;
+}
+.main-bg {
+	background-color: #0f0f0f;
+	padding-top: 20px;
+}
+.category-btn {
+	font-weight: bold !important;
+	text-transform: capitalize;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	margin-left: 15px;
+	background-color: #0f0f0f !important;
+	color: white !important;
+	padding: 7px 15px;
+	border-radius: 20px;
+	transition: all 0.3s ease;
+}
+.category-span {
+	font-size: 15px;
+	letter-spacing: 0.9px;
+	margin-left: 10px !important;
+}
+.category-btn:hover {
+	border-radius: 5px !important;
+	padding: 7px 15px;
+	background-color: rgba(187, 170, 204, 0.383) !important;
 }
