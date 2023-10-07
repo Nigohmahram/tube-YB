@@ -32,10 +32,11 @@ body {
 	border: none;
 	cursor: pointer;
 	margin-left: 15px;
-	background-color: #0f0f0f !important;
+	margin-bottom: 5px;
+	background-color: #0f0f0f;
 	color: white !important;
 	padding: 7px 15px;
-	border-radius: 20px;
+	border-radius: 20px !important;
 	transition: all 0.3s ease;
 }
 .category-span {
@@ -44,7 +45,7 @@ body {
 	margin-left: 10px !important;
 }
 .category-btn:hover {
-	border-radius: 5px !important;
+	border-radius: 20px !important;
 	padding: 7px 15px;
-	background-color: rgba(187, 170, 204, 0.383) !important;
+	background: rgba(187, 170, 204, 0.356) !important;
 }

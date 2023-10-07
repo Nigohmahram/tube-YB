@@ -1,20 +1,38 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box, Container, Stack, Typography } from '@mui/material';
-import { colors } from '../../constants/colors.js';
-import { Category } from '../';
+import { colors } from '../../constants/colors';
+import { Category, Videos } from '../';
+import { ApiService } from '../../service/api.service';
 
 const Main = () => {
-	const [selectedCategory, setSelectedCategory] = useState('New ');
+	const [selectedCategory, setSelectedCategory] = useState('New');
+	const [videos, setVideos] = useState([]);
+
+	const selectedCategoryHandler = category => setSelectedCategory(category);
+
+	useEffect(() => {
+		const getData = async () => {
+			try {
+				const data = await ApiService.fetching('search');
+				setVideos(data);
+			} catch (error) {
+				console.log(error);
+			}
+		};
+		getData();
+		//Promise
+		// ApiService.fetching('search').then(data => setVideos(data));
+	}, []);
 	return (
 		<Stack className='main-bg'>
-			<Category />
+			<Category selectedCategoryHandler={selectedCategoryHandler} selectedCategory={selectedCategory} />
 			<Box p={2} sx={{ height: '90vh' }}>
 				<Container maxWidth={'90%'}>
 					<Typography variant='h4' fontWeight={'bold'} marginBottom={'2'}>
 						{selectedCategory}
-						<span style={{ color: colors.mainselected }}>vidios</span>
+						<span style={{ color: colors.mainselected }}> Videos</span>
 					</Typography>
-					vidios
+					<Videos videos={videos} />
 				</Container>
 			</Box>
 		</Stack>
