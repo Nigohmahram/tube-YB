@@ -13,6 +13,9 @@ import {
 	School,
 	SportsEsports,
 	TheaterComedy,
+	CastForEducation,
+	LocationSearching,
+	SportsSoccer,
 } from '@mui/icons-material';
 
 export const logo = 'https://cdn.iconscout.com/icon/free/png-256/free-video-play-button-461759.png?f=webp';
@@ -21,7 +24,7 @@ export const category = [
 	{ name: 'New', icon: <Home /> },
 	{ name: 'Movie', icon: <OndemandVideo /> },
 	{ name: 'Live', icon: <LiveTv /> },
-	{ name: 'Gaming', icon: <SportsEsports /> },
+	{ name: '게임', icon: <SportsEsports /> },
 	{ name: 'Education', icon: <School /> },
 	{ name: 'Sport', icon: <FitnessCenter /> },
 	{ name: 'Comedy', icon: <TheaterComedy /> },
@@ -33,4 +36,7 @@ export const category = [
 	{ name: 'Dramy', icon: <FilterDrama /> },
 	{ name: 'Shopping', icon: <AddShoppingCart /> },
 	{ name: 'Business', icon: <AddBusiness /> },
+	{ name: 'South Korea', icon: <CastForEducation /> },
+	{ name: 'Uzbekistan', icon: <LocationSearching /> },
+	{ name: 'Football', icon: <SportsSoccer /> },
 ];
