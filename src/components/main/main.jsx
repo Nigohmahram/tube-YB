@@ -22,7 +22,7 @@ const Main = () => {
 		getData();
 		//Promise
 		// ApiService.fetching('search').then(data => setVideos(data));
-	}, []);
+	}, [selectedCategory]);
 	return (
 		<Stack className='main-bg'>
 			<Category selectedCategoryHandler={selectedCategoryHandler} selectedCategory={selectedCategory} />
