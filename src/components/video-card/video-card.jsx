@@ -5,7 +5,6 @@ import { CheckCircle } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
 const VideoCard = ({ video }) => {
-	console.log(video);
 	return (
 		<Card
 			sx={{
@@ -37,7 +36,7 @@ const VideoCard = ({ video }) => {
 						{video?.snippet?.description.slice(0, 70)}
 					</Typography>
 				</Link>
-				<>
+				<Link to={`/channel/${video?.snippet?.channelId}`}>
 					<Stack direction={'row'} position={'absolute'} bottom={'10px'} alignItems={'center'} gap={'5px'}>
 						<Avatar src={video?.snippet?.thumbnails?.high?.url} />
 						<Typography variant={'subtitle2'} color={'gray'}>
@@ -45,7 +44,7 @@ const VideoCard = ({ video }) => {
 							<CheckCircle sx={{ fontSize: '15px', color: 'gray', ml: '5px', mt: '2px' }} />
 						</Typography>
 					</Stack>
-				</>
+				</Link>
 			</CardContent>
 		</Card>
 	);

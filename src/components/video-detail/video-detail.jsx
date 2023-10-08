@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { ApiService } from '../../service/api.service';
 import { Avatar, Box, Chip, Stack, Typography } from '@mui/material';
 import ReactPlayer from 'react-player';
@@ -62,21 +62,23 @@ const VideoDetail = () => {
 						</Stack>
 					</Stack>
 					<Stack direction={'row'} py={'1px'} px={'2px'}>
-						<Stack direction={'row'} alignItems={'center'} gap={'5px'} marginTop={'5px'}>
-							<Avatar alt={videoDetail.snippet.channelTitle} src={videoDetail.snippet.thumbnails.default.url} />
-							<Typography variant='subtitle2' color={'gray'}>
-								{videoDetail.snippet.channelTitle}
-								<CheckCircle sx={{ fontSize: '12px', color: 'gray', ml: '5px' }} />
-							</Typography>
-						</Stack>
+						<Link to={`/channel/${videoDetail?.snippet?.channelId}`}>
+							<Stack direction={'row'} alignItems={'center'} gap={'5px'} marginTop={'5px'}>
+								<Avatar alt={videoDetail.snippet.channelTitle} src={videoDetail.snippet.thumbnails.default.url} />
+								<Typography variant='subtitle2' color={'gray'}>
+									{videoDetail.snippet.channelTitle}
+									<CheckCircle sx={{ fontSize: '12px', color: 'gray', ml: '5px' }} />
+								</Typography>
+							</Stack>
+						</Link>
 					</Stack>
 				</Box>
 				<Box
 					width={{ xs: '100%', md: '25%' }}
 					px={'2px'}
 					py={{ md: 1, xs: 5 }}
-					justifyContent='center'
-					alignItems='center'
+					justifyContent={'center'}
+					alignItems={'center'}
 					overflow={'scroll'}
 					maxHeight={'120vh'}
 				>
