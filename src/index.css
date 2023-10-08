@@ -10,7 +10,12 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
 	/* flex-wrap: wrap; */
 }
-
+a {
+	text-decoration: none;
+}
+a:hover {
+	opacity: 0.6;
+}
 .search-bar {
 	border: none;
 	outline: none;
@@ -51,8 +56,15 @@ body {
 	padding: 7px 15px;
 	background: rgba(187, 170, 204, 0.356) !important;
 }
+.react-player {
+	height: 77vh !important;
+	width: 100% !important;
+}
 @media screen and (max-width: 600) {
 	.search-bar {
 		width: 200px;
+	}
+	.react-player {
+		height: 45vh !important;
 	}
 }

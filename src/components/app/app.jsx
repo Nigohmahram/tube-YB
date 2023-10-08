@@ -8,7 +8,7 @@ const App = () => {
 			<Routes>
 				<Route path='/' element={<Main />} />
 				<Route path='/chanel/:id' element={<Chanel />} />
-				<Route path='/vidio/:id' element={<VideoDetail />} />
+				<Route path='/video/:id' element={<VideoDetail />} />
 				<Route path='/search/:id' element={<Search />} />
 			</Routes>
 		</Box>
