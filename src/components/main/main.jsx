@@ -28,8 +28,8 @@ const Main = () => {
 			<Category selectedCategoryHandler={selectedCategoryHandler} selectedCategory={selectedCategory} />
 			<Box p={2} sx={{ height: '90vh' }}>
 				<Container maxWidth={'90%'}>
-					<Typography variant='h4' fontWeight={'bold'} marginBottom={'2'}>
-						{selectedCategory}
+					<Typography variant='h4' fontWeight={'bold'} marginBottom={'5px'}>
+						<span style={{ color: colors.red }}>{selectedCategory}</span>
 						<span style={{ color: colors.mainselected }}> Videos</span>
 					</Typography>
 					<Videos videos={videos} />

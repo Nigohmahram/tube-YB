@@ -24,7 +24,7 @@ export const category = [
 	{ name: 'New', icon: <Home /> },
 	{ name: 'Movie', icon: <OndemandVideo /> },
 	{ name: 'Live', icon: <LiveTv /> },
-	{ name: '게임', icon: <SportsEsports /> },
+	{ name: 'Gaming', icon: <SportsEsports /> },
 	{ name: 'Education', icon: <School /> },
 	{ name: 'Sport', icon: <FitnessCenter /> },
 	{ name: 'Comedy', icon: <TheaterComedy /> },
